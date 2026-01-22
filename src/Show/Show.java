@@ -1,18 +1,50 @@
+package Show;
+
 import Person.Actor;
+import Person.Director;
 
 import java.util.ArrayList;
 
 public class Show {
-    private  String title;
+    private String title;
     private int duration;
-    private String director;
-    private ArrayList<Actor> listOfActors;
+    private Director director;
+    private ArrayList<Actor> listOfActors = new ArrayList<>();;
 
 
-    public Show(String title, int duration, String director, ArrayList<Actor> listOfActors) {
+    public Show(String title, int duration, Director director) {
         this.title = title;
         this.duration = duration;
         this.director = director;
-        this.listOfActors = listOfActors;
     }
+
+
+    public void printDirector() {
+        System.out.println(director);
+    }
+
+    public void printAllActor() {
+        for (Actor actor:listOfActors){
+            System.out.println(actor);
+        }
+    }
+
+    public void addActor(Actor actor) {
+        if (listOfActors.contains(actor)) {
+            System.out.println("Такой Актер уже добавлен");
+        } else {
+            listOfActors.add(actor);
+        }
+    }
+
+    public void replaceActor(Actor newActor, Actor oldActor) {
+        for (int i = 0; i < listOfActors.size(); i++) {
+
+            if (listOfActors.get(i).equals(oldActor)) {
+                listOfActors.set(i, newActor);
+            }
+
+        }
+    }
+
 }

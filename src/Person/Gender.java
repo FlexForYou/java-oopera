@@ -1,4 +1,6 @@
+package Person;
+
 public enum Gender {
-    MAlE,
+    MALE,
     FEMALE
 }

@@ -1,4 +1,4 @@
-import java.util.Objects;
+package Person;
 
 public class Actor extends Person {
 
@@ -17,5 +17,13 @@ public class Actor extends Person {
         return height == actor.height;
     }
 
+    @Override
+    public String toString() {
+        return "Actor{" +
+                "name='" + getName() + "', " +
+                "surname='" + getSurname() + "', " +
+                "height=" + height + " cm" +
+                "}";
+    }
 
 }

@@ -1,3 +1,5 @@
+package Person;
+
 import java.util.Objects;
 
 public class Person {
@@ -19,4 +21,19 @@ public class Person {
     }
 
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
 }
